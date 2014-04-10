@@ -1,0 +1,45 @@
+20:50:14.937  1895 [main] INFO  ivo.tests.MyHttpHandler - HI
+20:50:17.755  4713 [main] INFO  org.xnio - XNIO version 3.2.0.Beta4
+20:50:17.913  4871 [main] INFO  org.xnio.nio - XNIO NIO Implementation Version 3.2.0.Beta4
+20:53:24.443  4773 [main] INFO  ivo.tests.MyHttpHandler - HI
+20:53:24.547  4877 [main] INFO  org.xnio - XNIO version 3.2.0.Beta4
+20:53:24.690  5020 [main] INFO  org.xnio.nio - XNIO NIO Implementation Version 3.2.0.Beta4
+20:54:38.497  78827 [XNIO-1 I/O-1] INFO  ivo.tests.MyHttpHandler - Entering application.
+20:54:45.642  85972 [XNIO-1 I/O-1] ERROR io.undertow.request - Blocking request failed HttpServerExchange{ GET /hi}
+com.mongodb.MongoException$Network: IOException authenticating the connection
+	at com.mongodb.DBPort$NativeAuthenticator.authenticate(DBPort.java:552) ~[mongo-java-driver-2.11.4.jar:na]
+	at com.mongodb.DBPort.authenticate(DBPort.java:322) ~[mongo-java-driver-2.11.4.jar:na]
+	at com.mongodb.DBTCPConnector.authenticate(DBTCPConnector.java:635) ~[mongo-java-driver-2.11.4.jar:na]
+	at com.mongodb.DBApiLayer.doAuthenticate(DBApiLayer.java:180) ~[mongo-java-driver-2.11.4.jar:na]
+	at com.mongodb.DB.authenticateCommandHelper(DB.java:631) ~[mongo-java-driver-2.11.4.jar:na]
+	at com.mongodb.DB.authenticate(DB.java:589) ~[mongo-java-driver-2.11.4.jar:na]
+	at ivo.tests.MyHttpHandler.handleRequest(MyHttpHandler.java:60) ~[classes/:na]
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:164) ~[undertow-core-1.0.0.Beta29.jar:1.0.0.Beta29]
+	at io.undertow.server.protocol.http.HttpReadListener.handleEvent(HttpReadListener.java:142) ~[undertow-core-1.0.0.Beta29.jar:1.0.0.Beta29]
+	at io.undertow.server.protocol.http.HttpOpenListener.handleEvent(HttpOpenListener.java:69) ~[undertow-core-1.0.0.Beta29.jar:1.0.0.Beta29]
+	at io.undertow.server.protocol.http.HttpOpenListener.handleEvent(HttpOpenListener.java:38) ~[undertow-core-1.0.0.Beta29.jar:1.0.0.Beta29]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.2.0.Beta4.jar:3.2.0.Beta4]
+	at org.xnio.ChannelListeners$10.handleEvent(ChannelListeners.java:291) [xnio-api-3.2.0.Beta4.jar:3.2.0.Beta4]
+	at org.xnio.ChannelListeners$10.handleEvent(ChannelListeners.java:286) [xnio-api-3.2.0.Beta4.jar:3.2.0.Beta4]
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.2.0.Beta4.jar:3.2.0.Beta4]
+	at org.xnio.nio.NioTcpServerHandle.handleReady(NioTcpServerHandle.java:53) [xnio-nio-3.2.0.Beta4.jar:3.2.0.Beta4]
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:531) [xnio-nio-3.2.0.Beta4.jar:3.2.0.Beta4]
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.7.0_51]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339) ~[na:1.7.0_51]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200) ~[na:1.7.0_51]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182) ~[na:1.7.0_51]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.7.0_51]
+	at java.net.Socket.connect(Socket.java:579) ~[na:1.7.0_51]
+	at com.mongodb.DBPort._open(DBPort.java:223) ~[mongo-java-driver-2.11.4.jar:na]
+	at com.mongodb.DBPort.go(DBPort.java:125) ~[mongo-java-driver-2.11.4.jar:na]
+	at com.mongodb.DBPort.go(DBPort.java:106) ~[mongo-java-driver-2.11.4.jar:na]
+	at com.mongodb.DBPort.findOne(DBPort.java:162) ~[mongo-java-driver-2.11.4.jar:na]
+	at com.mongodb.DBPort.runCommand(DBPort.java:170) ~[mongo-java-driver-2.11.4.jar:na]
+	at com.mongodb.DBPort$NativeAuthenticator.authenticate(DBPort.java:544) ~[mongo-java-driver-2.11.4.jar:na]
+	... 16 common frames omitted
+20:57:12.918  306  [main] INFO  ivo.tests.MyHttpHandler - HI
+20:57:12.987  375  [main] INFO  org.xnio - XNIO version 3.2.0.Beta4
+20:57:13.070  458  [main] INFO  org.xnio.nio - XNIO NIO Implementation Version 3.2.0.Beta4
+20:57:25.312  12700 [XNIO-1 I/O-1] INFO  ivo.tests.MyHttpHandler - Entering application.
+20:57:25.924  13312 [XNIO-1 I/O-1] ERROR ivo.tests.MyHttpHandler - IOException authenticating the connection

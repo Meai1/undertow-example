@@ -1,45 +1,35 @@
-20:50:14.937  1895 [main] INFO  ivo.tests.MyHttpHandler - HI
-20:50:17.755  4713 [main] INFO  org.xnio - XNIO version 3.2.0.Beta4
-20:50:17.913  4871 [main] INFO  org.xnio.nio - XNIO NIO Implementation Version 3.2.0.Beta4
-20:53:24.443  4773 [main] INFO  ivo.tests.MyHttpHandler - HI
-20:53:24.547  4877 [main] INFO  org.xnio - XNIO version 3.2.0.Beta4
-20:53:24.690  5020 [main] INFO  org.xnio.nio - XNIO NIO Implementation Version 3.2.0.Beta4
-20:54:38.497  78827 [XNIO-1 I/O-1] INFO  ivo.tests.MyHttpHandler - Entering application.
-20:54:45.642  85972 [XNIO-1 I/O-1] ERROR io.undertow.request - Blocking request failed HttpServerExchange{ GET /hi}
-com.mongodb.MongoException$Network: IOException authenticating the connection
-	at com.mongodb.DBPort$NativeAuthenticator.authenticate(DBPort.java:552) ~[mongo-java-driver-2.11.4.jar:na]
-	at com.mongodb.DBPort.authenticate(DBPort.java:322) ~[mongo-java-driver-2.11.4.jar:na]
-	at com.mongodb.DBTCPConnector.authenticate(DBTCPConnector.java:635) ~[mongo-java-driver-2.11.4.jar:na]
-	at com.mongodb.DBApiLayer.doAuthenticate(DBApiLayer.java:180) ~[mongo-java-driver-2.11.4.jar:na]
-	at com.mongodb.DB.authenticateCommandHelper(DB.java:631) ~[mongo-java-driver-2.11.4.jar:na]
-	at com.mongodb.DB.authenticate(DB.java:589) ~[mongo-java-driver-2.11.4.jar:na]
-	at ivo.tests.MyHttpHandler.handleRequest(MyHttpHandler.java:60) ~[classes/:na]
-	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:164) ~[undertow-core-1.0.0.Beta29.jar:1.0.0.Beta29]
-	at io.undertow.server.protocol.http.HttpReadListener.handleEvent(HttpReadListener.java:142) ~[undertow-core-1.0.0.Beta29.jar:1.0.0.Beta29]
-	at io.undertow.server.protocol.http.HttpOpenListener.handleEvent(HttpOpenListener.java:69) ~[undertow-core-1.0.0.Beta29.jar:1.0.0.Beta29]
-	at io.undertow.server.protocol.http.HttpOpenListener.handleEvent(HttpOpenListener.java:38) ~[undertow-core-1.0.0.Beta29.jar:1.0.0.Beta29]
-	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.2.0.Beta4.jar:3.2.0.Beta4]
-	at org.xnio.ChannelListeners$10.handleEvent(ChannelListeners.java:291) [xnio-api-3.2.0.Beta4.jar:3.2.0.Beta4]
-	at org.xnio.ChannelListeners$10.handleEvent(ChannelListeners.java:286) [xnio-api-3.2.0.Beta4.jar:3.2.0.Beta4]
-	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92) ~[xnio-api-3.2.0.Beta4.jar:3.2.0.Beta4]
-	at org.xnio.nio.NioTcpServerHandle.handleReady(NioTcpServerHandle.java:53) [xnio-nio-3.2.0.Beta4.jar:3.2.0.Beta4]
-	at org.xnio.nio.WorkerThread.run(WorkerThread.java:531) [xnio-nio-3.2.0.Beta4.jar:3.2.0.Beta4]
-Caused by: java.net.ConnectException: Connection refused
-	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.7.0_51]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339) ~[na:1.7.0_51]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200) ~[na:1.7.0_51]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182) ~[na:1.7.0_51]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.7.0_51]
-	at java.net.Socket.connect(Socket.java:579) ~[na:1.7.0_51]
-	at com.mongodb.DBPort._open(DBPort.java:223) ~[mongo-java-driver-2.11.4.jar:na]
-	at com.mongodb.DBPort.go(DBPort.java:125) ~[mongo-java-driver-2.11.4.jar:na]
-	at com.mongodb.DBPort.go(DBPort.java:106) ~[mongo-java-driver-2.11.4.jar:na]
-	at com.mongodb.DBPort.findOne(DBPort.java:162) ~[mongo-java-driver-2.11.4.jar:na]
-	at com.mongodb.DBPort.runCommand(DBPort.java:170) ~[mongo-java-driver-2.11.4.jar:na]
-	at com.mongodb.DBPort$NativeAuthenticator.authenticate(DBPort.java:544) ~[mongo-java-driver-2.11.4.jar:na]
-	... 16 common frames omitted
-20:57:12.918  306  [main] INFO  ivo.tests.MyHttpHandler - HI
-20:57:12.987  375  [main] INFO  org.xnio - XNIO version 3.2.0.Beta4
-20:57:13.070  458  [main] INFO  org.xnio.nio - XNIO NIO Implementation Version 3.2.0.Beta4
-20:57:25.312  12700 [XNIO-1 I/O-1] INFO  ivo.tests.MyHttpHandler - Entering application.
-20:57:25.924  13312 [XNIO-1 I/O-1] ERROR ivo.tests.MyHttpHandler - IOException authenticating the connection
+08:33:55.244  16626 [main] WARN  org.hornetq.core.server - HQ222018: AIO was not located on this platform, it will fall back to using pure Java NIO. If your platform is Linux, install LibAIO to enable the AIO journal
+08:33:55.660  17042 [main] INFO  org.hornetq.core.server - HQ221000: live server is starting with configuration HornetQ Configuration (clustered=false,backup=false,sharedStore=true,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/largemessages,pagingDirectory=data/paging)
+08:33:55.697  17079 [main] WARN  org.hornetq.core.server - HQ222007: Security risk! HornetQ is running with the default cluster admin user and default password. Please see the HornetQ user guide, cluster chapter, for instructions on how to change this.
+08:33:55.767  17149 [main] INFO  org.hornetq.core.server - HQ221043: Adding protocol support CORE
+08:33:55.785  17167 [main] INFO  org.hornetq.core.server - HQ221043: Adding protocol support AMQP
+08:33:55.804  17186 [main] INFO  org.hornetq.core.server - HQ221043: Adding protocol support STOMP
+08:33:57.083  18465 [main] INFO  org.hornetq.core.server - HQ221003: trying to deploy queue jms.topic.chat
+08:33:58.004  19386 [main] INFO  org.hornetq.core.server - HQ221020: Started Netty Acceptor version 4.0.13.Final localhost:61614
+08:33:58.012  19394 [main] INFO  org.hornetq.core.server - HQ221020: Started Netty Acceptor version 4.0.13.Final localhost:5445
+08:33:58.023  19405 [main] INFO  org.hornetq.core.server - HQ221007: Server is now live
+08:33:58.025  19407 [main] INFO  org.hornetq.core.server - HQ221001: HornetQ Server version 2.5.0.SNAPSHOT (Wild Hornet, 124) [3ff1bd99-c5fa-11e3-b1f8-05214f1197a8] 
+08:35:16.626  2249 [main] WARN  org.hornetq.core.server - HQ222018: AIO was not located on this platform, it will fall back to using pure Java NIO. If your platform is Linux, install LibAIO to enable the AIO journal
+08:35:16.721  2344 [main] INFO  org.hornetq.core.server - HQ221000: live server is starting with configuration HornetQ Configuration (clustered=false,backup=false,sharedStore=true,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/largemessages,pagingDirectory=data/paging)
+08:35:16.735  2358 [main] WARN  org.hornetq.core.server - HQ222007: Security risk! HornetQ is running with the default cluster admin user and default password. Please see the HornetQ user guide, cluster chapter, for instructions on how to change this.
+08:35:16.757  2380 [main] INFO  org.hornetq.core.server - HQ221043: Adding protocol support CORE
+08:35:16.761  2384 [main] INFO  org.hornetq.core.server - HQ221043: Adding protocol support AMQP
+08:35:16.767  2390 [main] INFO  org.hornetq.core.server - HQ221043: Adding protocol support STOMP
+08:35:17.117  2740 [main] INFO  org.hornetq.core.server - HQ221003: trying to deploy queue jms.topic.chat
+08:35:17.515  3138 [main] INFO  org.hornetq.core.server - HQ221020: Started Netty Acceptor version 4.0.13.Final localhost:61614
+08:35:17.525  3148 [main] INFO  org.hornetq.core.server - HQ221020: Started Netty Acceptor version 4.0.13.Final localhost:5445
+08:35:17.532  3155 [main] INFO  org.hornetq.core.server - HQ221007: Server is now live
+08:35:17.533  3156 [main] INFO  org.hornetq.core.server - HQ221001: HornetQ Server version 2.5.0.SNAPSHOT (Wild Hornet, 124) [3ff1bd99-c5fa-11e3-b1f8-05214f1197a8] 
+08:44:43.583  3630 [main] WARN  org.hornetq.core.server - HQ222018: AIO was not located on this platform, it will fall back to using pure Java NIO. If your platform is Linux, install LibAIO to enable the AIO journal
+08:44:43.775  3822 [main] INFO  org.hornetq.core.server - HQ221000: live server is starting with configuration HornetQ Configuration (clustered=false,backup=false,sharedStore=true,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/largemessages,pagingDirectory=data/paging)
+08:44:43.795  3842 [main] WARN  org.hornetq.core.server - HQ222007: Security risk! HornetQ is running with the default cluster admin user and default password. Please see the HornetQ user guide, cluster chapter, for instructions on how to change this.
+08:44:43.819  3866 [main] INFO  org.hornetq.core.server - HQ221043: Adding protocol support CORE
+08:44:43.828  3875 [main] INFO  org.hornetq.core.server - HQ221043: Adding protocol support AMQP
+08:44:43.838  3885 [main] INFO  org.hornetq.core.server - HQ221043: Adding protocol support STOMP
+08:44:44.237  4284 [main] INFO  org.hornetq.core.server - HQ221003: trying to deploy queue jms.topic.chat
+08:44:45.043  5090 [main] INFO  org.hornetq.core.server - HQ221020: Started Netty Acceptor version 4.0.13.Final localhost:61614
+08:44:45.056  5103 [main] INFO  org.hornetq.core.server - HQ221020: Started Netty Acceptor version 4.0.13.Final localhost:5445
+08:44:45.062  5109 [main] INFO  org.hornetq.core.server - HQ221007: Server is now live
+08:44:45.062  5109 [main] INFO  org.hornetq.core.server - HQ221001: HornetQ Server version 2.5.0.SNAPSHOT (Wild Hornet, 124) [3ff1bd99-c5fa-11e3-b1f8-05214f1197a8] 
+08:46:26.913  106960 [Thread-8] WARN  org.hornetq.core.protocol.stomp - HQ222068: connection closed org.hornetq.core.protocol.stomp.StompConnection@593e038d
+08:46:36.917  116964 [Thread-8] WARN  org.hornetq.core.protocol.stomp - HQ222068: connection closed org.hornetq.core.protocol.stomp.StompConnection@593e038d
